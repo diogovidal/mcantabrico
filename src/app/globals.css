@@ -1,26 +1,70 @@
 @import "tailwindcss";
 
+/*
+ * Design tokens EMCantábrico.
+ * --brand-primary e --brand-accent vêm de cores REAIS extraídas do site
+ * atual (logo sólido = #262938; cor de CTA/links do tema atual = #0076ff).
+ * As demais são derivações neutras de design (tints/shades), não novas
+ * cores de marca inventadas.
+ */
 :root {
+  --brand-primary: #262938;
+  --brand-secondary: #4b5169;
+  /*
+   * #0076ff es el azul real extraído del CSS del sitio actual. Se usa aquí
+   * ligeramente oscurecido (mismo tono, ~9% menos luminancia) para cumplir
+   * WCAG AA (4.5:1) como color de texto/botón sobre fondos claros, ya que
+   * el valor original quedaba en ~4.17:1. --brand-accent-on-dark es una
+   * variante más clara del mismo tono para usarse como texto/icono sobre
+   * fondos oscuros (--background-dark), donde el valor oscurecido no
+   * ofrece contraste suficiente.
+   */
+  --brand-accent: #0069e6;
+  --brand-accent-on-dark: #2f8dff;
+
   --background: #ffffff;
-  --foreground: #171717;
+  --background-dark: #1b1d29;
+
+  --surface: #f5f6f9;
+  --surface-elevated: #ffffff;
+
+  --text-primary: #1b1d29;
+  --text-secondary: #5b6172;
+  --text-on-dark-primary: #ffffff;
+  --text-on-dark-secondary: rgba(255, 255, 255, 0.72);
+
+  --border: #e3e5ec;
+  --border-on-dark: rgba(255, 255, 255, 0.14);
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+  --color-brand-primary: var(--brand-primary);
+  --color-brand-secondary: var(--brand-secondary);
+  --color-brand-accent: var(--brand-accent);
+  --color-brand-accent-on-dark: var(--brand-accent-on-dark);
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-background: var(--background);
+  --color-background-dark: var(--background-dark);
+  --color-surface: var(--surface);
+  --color-surface-elevated: var(--surface-elevated);
+
+  --color-text-primary: var(--text-primary);
+  --color-text-secondary: var(--text-secondary);
+  --color-text-on-dark-primary: var(--text-on-dark-primary);
+  --color-text-on-dark-secondary: var(--text-on-dark-secondary);
+
+  --color-border: var(--border);
+  --color-border-on-dark: var(--border-on-dark);
+
+  --font-sans: var(--font-manrope);
+
+  --radius-card: 1.5rem;
+  --radius-card-lg: 1.75rem;
+  --radius-btn: 0.75rem;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-primary);
+  font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif;
 }
