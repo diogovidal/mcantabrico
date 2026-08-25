@@ -1,7 +1,7 @@
 import { Container } from "@/components/ui/Container";
 
 const steps = [
-  { title: "Pide cita", description: "Solicitas cita por teléfono, WhatsApp o el formulario online." },
+  { title: "Pide cita", description: "Solicitas cita por teléfono o WhatsApp." },
   { title: "Revisamos tu vehículo", description: "Inspeccionamos el coche y escuchamos lo que nos cuentas." },
   { title: "Diagnosticamos el problema", description: "Localizamos el origen real de la avería antes de actuar." },
   { title: "Te explicamos la solución", description: "Te contamos qué hemos encontrado y qué opciones tienes." },

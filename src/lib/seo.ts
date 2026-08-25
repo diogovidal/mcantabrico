@@ -1,6 +1,19 @@
-import { siteConfig } from "@/lib/config";
+import { siteConfig, weeklyHours } from "@/lib/config";
 import type { FaqItem, Service } from "@/content/services";
 import type { Tip } from "@/content/tips";
+
+function getOpeningHoursSpecification() {
+  return weeklyHours
+    .filter((day) => day.shifts.length > 0)
+    .flatMap((day) =>
+      day.shifts.map(([opens, closes]) => ({
+        "@type": "OpeningHoursSpecification",
+        dayOfWeek: day.schemaDay,
+        opens,
+        closes,
+      })),
+    );
+}
 
 export function getLocalBusinessSchema() {
   return {
@@ -19,6 +32,7 @@ export function getLocalBusinessSchema() {
       addressRegion: siteConfig.address.region,
       addressCountry: siteConfig.address.country,
     },
+    openingHoursSpecification: getOpeningHoursSpecification(),
   };
 }
 

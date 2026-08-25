@@ -24,10 +24,10 @@ export function Footer() {
       <Container className="grid grid-cols-1 gap-10 py-16 sm:grid-cols-2 lg:grid-cols-4">
         <div>
           <Image
-            src="/brand/logo-white.png"
+            src="/brand/logo.png"
             alt={siteConfig.legalName}
-            width={569}
-            height={79}
+            width={1200}
+            height={321}
             className="mb-4 h-9 w-auto"
           />
           <p className="text-sm leading-relaxed">{siteConfig.description}</p>

@@ -32,6 +32,28 @@ export const siteConfig = {
   googlePlaceId: process.env.GOOGLE_PLACE_ID ?? "",
 } as const;
 
+/**
+ * Horario semanal del taller. `schemaDay` es el valor en inglés que exige
+ * schema.org/OpeningHoursSpecification; `shifts` son los tramos horarios
+ * del día (vacío = cerrado).
+ */
+export const weeklyHours = [
+  { day: "Lunes", schemaDay: "Monday", shifts: [["08:00", "14:00"], ["15:00", "20:00"]] },
+  { day: "Martes", schemaDay: "Tuesday", shifts: [["08:00", "14:00"], ["15:00", "20:00"]] },
+  { day: "Miércoles", schemaDay: "Wednesday", shifts: [["08:00", "14:00"], ["15:00", "20:00"]] },
+  { day: "Jueves", schemaDay: "Thursday", shifts: [["08:00", "14:00"], ["15:00", "20:00"]] },
+  { day: "Viernes", schemaDay: "Friday", shifts: [["08:00", "14:00"]] },
+  { day: "Sábado", schemaDay: "Saturday", shifts: [] },
+  { day: "Domingo", schemaDay: "Sunday", shifts: [] },
+] as const;
+
+export function getDisplayHours() {
+  return weeklyHours.map(({ day, shifts }) => ({
+    day,
+    hours: shifts.length ? shifts.map(([open, close]) => `${open}–${close}`).join(" y ") : "Cerrado",
+  }));
+}
+
 export function telHref() {
   return `tel:+34${siteConfig.phone}`;
 }

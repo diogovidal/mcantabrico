@@ -21,27 +21,35 @@ export default function PrivacidadPage() {
 
       <h2>2. Datos que se recogen</h2>
       <p>
-        A través del formulario de {"«Pedir cita»"} se recogen los
-        siguientes datos: nombre, teléfono, email (opcional), marca y modelo
-        del vehículo, matrícula (opcional), servicio o motivo de la consulta,
-        descripción del problema (opcional) y fecha preferida (opcional).
+        Este sitio web no dispone de formularios ni de base de datos propia:
+        no recoge ni almacena datos personales de forma automática. El
+        contacto para pedir cita se realiza directamente a través de
+        WhatsApp, llamada telefónica o email, usando las aplicaciones y
+        servicios del propio usuario.
+      </p>
+      <p>
+        Cuando el usuario contacta por estos medios, los datos que comparta
+        (nombre, teléfono, email, datos del vehículo, descripción del
+        problema, etc.) son recibidos y tratados directamente por{" "}
+        {siteConfig.legalName} como destinatario de la comunicación, no a
+        través de este sitio web.
       </p>
 
-      <h2>3. Finalidad</h2>
+      <h2>3. WhatsApp</h2>
       <p>
-        Los datos se utilizan exclusivamente para gestionar la solicitud de
+        Los botones de WhatsApp de este sitio abren una conversación en la
+        aplicación de WhatsApp del usuario. Esa conversación se rige por las
+        condiciones y la política de privacidad de WhatsApp/Meta, ajenas a
+        este sitio web.
+      </p>
+
+      <h2>4. Finalidad</h2>
+      <p>
+        Los datos recibidos por {siteConfig.legalName} a través de estos
+        canales se utilizan exclusivamente para gestionar la solicitud de
         cita previa y contactar con el usuario para confirmar disponibilidad.
         No se utilizan para fines distintos ni se ceden a terceros salvo
-        obligación legal o para la prestación del propio servicio (por
-        ejemplo, el envío del email de notificación a través de un proveedor
-        de email transaccional).
-      </p>
-
-      <h2>4. Base legal</h2>
-      <p>
-        La base legal para el tratamiento es el consentimiento explícito del
-        usuario, otorgado al marcar la casilla correspondiente en el
-        formulario.
+        obligación legal.
       </p>
 
       <h2>5. Conservación de los datos</h2>
@@ -50,14 +58,13 @@ export default function PrivacidadPage() {
         solicitud y, posteriormente, durante los plazos legalmente exigibles.
       </p>
 
-      <h2>6. Encargados de tratamiento y servicios de terceros</h2>
+      <h2>6. Servicios de terceros integrados en el sitio</h2>
       <p>
-        Para el funcionamiento del formulario de cita previa y de las
-        secciones de reseñas/ubicación, este sitio puede apoyarse en
-        proveedores de infraestructura y comunicación (por ejemplo, servicios
-        de base de datos, envío de email transaccional y Google Maps
-        Platform). El uso de Google Maps Platform está sujeto a las
-        condiciones y política de privacidad de Google.
+        Este sitio integra Google Maps Platform (mapa de ubicación y, cuando
+        esté disponible, reseñas y fotos del perfil de negocio), que solo se
+        carga tras el consentimiento de cookies del usuario. El uso de Google
+        Maps Platform está sujeto a las condiciones y política de privacidad
+        de Google.
       </p>
 
       <h2>7. Derechos de las personas usuarias</h2>

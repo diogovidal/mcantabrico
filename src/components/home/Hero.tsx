@@ -43,12 +43,13 @@ export function Hero() {
 
         <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card-lg lg:aspect-[5/4]">
           <Image
-            src="/images/taller-hero.jpg"
-            alt="Taller EMCantábrico en Asturias"
+            src="/images/nave.jpg"
+            alt="Nave del taller EMCantábrico en Asturias"
             fill
             priority
             sizes="(min-width: 1024px) 50vw, 100vw"
             className="object-cover"
+            style={{ objectPosition: "60% 50%" }}
           />
         </div>
       </Container>

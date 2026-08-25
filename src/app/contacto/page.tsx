@@ -1,10 +1,10 @@
 import type { Metadata } from "next";
-import { Mail, MapPin, Phone } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { GoogleMapEmbed } from "@/components/ui/GoogleMapEmbed";
 import { WhatsAppIcon } from "@/components/ui/SocialIcons";
-import { mailtoHref, siteConfig, telHref, whatsappHref } from "@/lib/config";
+import { getDisplayHours, mailtoHref, siteConfig, telHref, whatsappHref } from "@/lib/config";
 
 export const metadata: Metadata = {
   title: "Contacto",
@@ -79,6 +79,31 @@ export default function ContactoPage() {
                   <p className="text-sm text-text-secondary">Dirección</p>
                   <p className="font-semibold text-text-primary">{siteConfig.address.full}</p>
                 </div>
+              </div>
+
+              <div className="rounded-card border border-border bg-surface-elevated p-5">
+                <div className="flex items-center gap-4">
+                  <span className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full bg-brand-accent/10 text-brand-accent">
+                    <Clock className="h-5 w-5" aria-hidden />
+                  </span>
+                  <p className="text-sm text-text-secondary">Horario</p>
+                </div>
+                <dl className="mt-4 space-y-1.5 border-t border-border pt-4">
+                  {getDisplayHours().map(({ day, hours }) => (
+                    <div key={day} className="flex items-baseline justify-between gap-4 text-sm">
+                      <dt className="text-text-secondary">{day}</dt>
+                      <dd
+                        className={
+                          hours === "Cerrado"
+                            ? "text-text-secondary"
+                            : "font-semibold text-text-primary"
+                        }
+                      >
+                        {hours}
+                      </dd>
+                    </div>
+                  ))}
+                </dl>
               </div>
             </div>
 

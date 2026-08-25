@@ -50,8 +50,8 @@ export default async function TallerPage() {
           </div>
           <div className="relative aspect-[4/3] w-full overflow-hidden rounded-card-lg">
             <Image
-              src="/images/taller-hero.jpg"
-              alt="Instalaciones del taller EMCantábrico"
+              src="/images/taller.jpg"
+              alt="Entrada del taller EMCantábrico"
               fill
               sizes="(min-width: 1024px) 50vw, 100vw"
               className="object-cover"

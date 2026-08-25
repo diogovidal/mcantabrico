@@ -26,8 +26,9 @@ export default function AvisoLegalPage() {
       <h2>2. Objeto</h2>
       <p>
         Este sitio web tiene como finalidad informar sobre los servicios del
-        taller de electromecánica {siteConfig.name} y permitir la solicitud de
-        cita previa a través del formulario correspondiente.
+        taller de electromecánica {siteConfig.name} y facilitar el contacto
+        con el taller (teléfono, WhatsApp y email) para la solicitud de cita
+        previa.
       </p>
 
       <h2>3. Condiciones de uso</h2>

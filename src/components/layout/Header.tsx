@@ -21,23 +21,22 @@ export function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80">
+    <header className="sticky top-0 z-50 border-b border-border-on-dark bg-background-dark/95 backdrop-blur supports-[backdrop-filter]:bg-background-dark/90">
       <Container className="flex h-20 items-center justify-between gap-4 py-3">
         <Link href="/" className="flex shrink-0 items-center" aria-label={siteConfig.name}>
           <Image
-            src="/brand/logo-dark.png"
+            src="/brand/logo.png"
             alt={siteConfig.legalName}
-            width={569}
-            height={79}
+            width={1200}
+            height={321}
             className="h-9 w-auto sm:h-10"
-            priority
           />
         </Link>
 
         <nav className="hidden items-center gap-1 lg:flex" aria-label="Navegación principal">
           <Link
             href="/"
-            className="rounded-btn px-3 py-2 text-sm font-medium text-text-primary hover:bg-surface"
+            className="rounded-btn px-3 py-2 text-sm font-medium text-text-on-dark-primary hover:bg-white/10"
           >
             Inicio
           </Link>
@@ -49,7 +48,7 @@ export function Header() {
           >
             <button
               type="button"
-              className="flex items-center gap-1 rounded-btn px-3 py-2 text-sm font-medium text-text-primary hover:bg-surface"
+              className="flex items-center gap-1 rounded-btn px-3 py-2 text-sm font-medium text-text-on-dark-primary hover:bg-white/10"
               aria-expanded={servicesOpen}
               aria-haspopup="true"
               onClick={() => setServicesOpen((v) => !v)}
@@ -60,10 +59,10 @@ export function Header() {
 
             {servicesOpen && (
               <div className="absolute left-1/2 top-full w-[640px] -translate-x-1/2 pt-3">
-                <div className="grid grid-cols-3 gap-6 rounded-card-lg border border-border bg-surface-elevated p-6 shadow-xl shadow-black/5">
+                <div className="grid grid-cols-3 gap-6 rounded-card-lg border border-border-on-dark bg-background-dark p-6 shadow-xl shadow-black/20">
                   {serviceGroups.map((group) => (
                     <div key={group.id}>
-                      <p className="mb-3 text-xs font-bold tracking-wide text-text-secondary uppercase">
+                      <p className="mb-3 text-xs font-bold tracking-wide text-text-on-dark-secondary uppercase">
                         {group.label}
                       </p>
                       <ul className="space-y-2">
@@ -73,7 +72,7 @@ export function Header() {
                             <li key={service.slug}>
                               <Link
                                 href={`/servicios/${service.slug}`}
-                                className="text-sm text-text-primary hover:text-brand-accent"
+                                className="text-sm text-text-on-dark-primary hover:text-brand-accent-on-dark"
                                 onClick={() => setServicesOpen(false)}
                               >
                                 {service.navLabel}
@@ -84,10 +83,10 @@ export function Header() {
                     </div>
                   ))}
                 </div>
-                <div className="mt-3 rounded-card-lg border border-border bg-surface-elevated px-6 py-3 text-center shadow-xl shadow-black/5">
+                <div className="mt-3 rounded-card-lg border border-border-on-dark bg-background-dark px-6 py-3 text-center shadow-xl shadow-black/20">
                   <Link
                     href="/servicios"
-                    className="text-sm font-semibold text-brand-accent"
+                    className="text-sm font-semibold text-brand-accent-on-dark"
                     onClick={() => setServicesOpen(false)}
                   >
                     Ver todos los servicios →
@@ -101,7 +100,7 @@ export function Header() {
             <Link
               key={link.href}
               href={link.href}
-              className="rounded-btn px-3 py-2 text-sm font-medium text-text-primary hover:bg-surface"
+              className="rounded-btn px-3 py-2 text-sm font-medium text-text-on-dark-primary hover:bg-white/10"
             >
               {link.label}
             </Link>
@@ -111,7 +110,7 @@ export function Header() {
         <div className="hidden items-center gap-4 lg:flex">
           <a
             href={telHref()}
-            className="flex items-center gap-2 text-sm font-semibold text-text-primary hover:text-brand-accent"
+            className="flex items-center gap-2 text-sm font-semibold text-text-on-dark-primary hover:text-brand-accent-on-dark"
           >
             <Phone className="h-4 w-4" aria-hidden />
             {siteConfig.phoneDisplay}
@@ -123,7 +122,7 @@ export function Header() {
 
         <button
           type="button"
-          className="flex h-10 w-10 items-center justify-center rounded-btn border border-border lg:hidden"
+          className="flex h-10 w-10 items-center justify-center rounded-btn border border-border-on-dark text-text-on-dark-primary lg:hidden"
           aria-label={mobileOpen ? "Cerrar menú" : "Abrir menú"}
           aria-expanded={mobileOpen}
           onClick={() => setMobileOpen((v) => !v)}
@@ -133,25 +132,25 @@ export function Header() {
       </Container>
 
       {mobileOpen && (
-        <div className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border bg-background lg:hidden">
+        <div className="max-h-[calc(100vh-5rem)] overflow-y-auto border-t border-border-on-dark bg-background-dark lg:hidden">
           <Container className="flex flex-col gap-1 py-4 pb-36">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="rounded-btn px-3 py-2.5 text-base font-medium text-text-primary hover:bg-surface"
+                className="rounded-btn px-3 py-2.5 text-base font-medium text-text-on-dark-primary hover:bg-white/10"
                 onClick={() => setMobileOpen(false)}
               >
                 {link.label}
               </Link>
             ))}
 
-            <p className="mt-3 px-3 text-xs font-bold tracking-wide text-text-secondary uppercase">
+            <p className="mt-3 px-3 text-xs font-bold tracking-wide text-text-on-dark-secondary uppercase">
               Servicios
             </p>
             {serviceGroups.map((group) => (
               <div key={group.id} className="px-3 py-1">
-                <p className="mb-1 text-xs font-semibold text-text-secondary">{group.label}</p>
+                <p className="mb-1 text-xs font-semibold text-text-on-dark-secondary">{group.label}</p>
                 <ul className="flex flex-col gap-1">
                   {services
                     .filter((s) => s.group === group.id)
@@ -159,7 +158,7 @@ export function Header() {
                       <li key={service.slug}>
                         <Link
                           href={`/servicios/${service.slug}`}
-                          className="block py-1 text-sm text-text-primary hover:text-brand-accent"
+                          className="block py-1 text-sm text-text-on-dark-primary hover:text-brand-accent-on-dark"
                           onClick={() => setMobileOpen(false)}
                         >
                           {service.navLabel}
@@ -172,7 +171,7 @@ export function Header() {
 
             <Link
               href="/servicios"
-              className="mt-2 px-3 py-2 text-sm font-semibold text-brand-accent"
+              className="mt-2 px-3 py-2 text-sm font-semibold text-brand-accent-on-dark"
               onClick={() => setMobileOpen(false)}
             >
               Ver todos los servicios →

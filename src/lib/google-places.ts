@@ -82,7 +82,7 @@ export async function fetchPlaceDetails(): Promise<NormalizedPlaceData | null> {
   }
 
   try {
-    const response = await fetch(`${PLACES_API_BASE}/places/${placeId}`, {
+    const response = await fetch(`${PLACES_API_BASE}/places/${placeId}?languageCode=es`, {
       headers: {
         "X-Goog-Api-Key": apiKey,
         "X-Goog-FieldMask": FIELD_MASK,
@@ -116,7 +116,9 @@ export function normalizePlaceData(raw: RawPlaceDetails): NormalizedPlaceData {
       authorUri: review.authorAttribution?.uri,
       rating: review.rating,
       relativeTime: review.relativePublishTimeDescription,
-      text: review.text?.text ?? review.originalText?.text ?? "",
+      // Preferimos el texto original del autor (no traducido por Google) para
+      // no alterar el sentido de la reseña.
+      text: review.originalText?.text ?? review.text?.text ?? "",
       publishTime: review.publishTime,
     })),
     photos: (raw.photos ?? []).map((photo) => ({
