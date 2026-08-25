@@ -35,6 +35,9 @@
 
   --border: #e3e5ec;
   --border-on-dark: rgba(255, 255, 255, 0.14);
+
+  /* Amarillo original de las estrellas de Google (marca de Google, no de EMCantábrico). */
+  --google-star: #fbbc05;
 }
 
 @theme inline {
@@ -55,6 +58,7 @@
 
   --color-border: var(--border);
   --color-border-on-dark: var(--border-on-dark);
+  --color-google-star: var(--google-star);
 
   --font-sans: var(--font-manrope);
 

@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import Image from "next/image";
-import { ChevronLeft, ChevronRight, Star } from "lucide-react";
+import { BadgeCheck, ChevronLeft, ChevronRight, Star } from "lucide-react";
 import type { NormalizedReview } from "@/lib/google-places";
 
 function ReviewCard({ review }: { review: NormalizedReview }) {
@@ -37,13 +37,18 @@ function ReviewCard({ review }: { review: NormalizedReview }) {
           <Star
             key={i}
             className={`h-4 w-4 ${
-              i < review.rating ? "fill-brand-accent text-brand-accent" : "text-border"
+              i < review.rating ? "fill-google-star text-google-star" : "text-border"
             }`}
           />
         ))}
       </div>
 
       <p className="line-clamp-6 text-sm text-text-secondary">{review.text}</p>
+
+      <p className="mt-4 flex items-center gap-1.5 text-xs text-text-secondary">
+        <BadgeCheck className="h-3.5 w-3.5 text-brand-accent" aria-hidden />
+        Reseña verificada de Google
+      </p>
     </article>
   );
 }

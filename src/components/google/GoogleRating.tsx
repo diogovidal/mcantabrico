@@ -14,7 +14,7 @@ export function GoogleRating({
           <Star
             key={i}
             className={`h-5 w-5 ${
-              i < Math.round(rating) ? "fill-brand-accent text-brand-accent" : "text-border"
+              i < Math.round(rating) ? "fill-google-star text-google-star" : "text-border"
             }`}
           />
         ))}
