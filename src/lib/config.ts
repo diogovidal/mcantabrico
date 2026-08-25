@@ -21,13 +21,10 @@ export const siteConfig = {
     country: "ES",
     full: "Aldea Bobes, 30, Nave 4, 33429 Bobes, Asturias",
   },
-  // PENDING_OWNER_INPUT: o site atual só linka para as home genéricas das
-  // redes (facebook.com, instagram.com, linkedin.com), sem perfil configurado.
-  // Preencher com o handle real assim que o proprietário confirmar.
   social: {
-    instagram: "",
-    facebook: "",
-    linkedin: "",
+    instagram: "https://www.instagram.com/emcantabrico/",
+    facebook: "https://www.facebook.com/people/Electromec%C3%A1nica-del-Cant%C3%A1brico/100093624177526/",
+    linkedin: "https://es.linkedin.com/company/electromec%C3%A1nica-del-cant%C3%A1brico",
   },
   googlePlaceId: process.env.GOOGLE_PLACE_ID ?? "",
 } as const;
