@@ -50,7 +50,7 @@ export const services: Service[] = [
     navLabel: "Diagnosis electrónica",
     title: "Diagnosis electrónica de coche en Asturias",
     benefit: "Localizamos el origen real de la avería antes de tocar nada.",
-    seoTitle: "Diagnosis Electrónica de Coche en Asturias | EMCantábrico",
+    seoTitle: "Diagnosis Electrónica de Coche en Asturias",
     metaDescription:
       "Diagnosis electrónica con equipo de escaneo para identificar la causa real de averías, testigos encendidos y fallos electrónicos en Asturias.",
     intro:
@@ -88,7 +88,7 @@ export const services: Service[] = [
     navLabel: "Electricidad / electromecánica",
     title: "Taller de electromecánica en Asturias",
     benefit: "Sistemas eléctricos y electrónicos del vehículo, revisados con criterio técnico.",
-    seoTitle: "Taller de Electromecánica en Asturias | EMCantábrico",
+    seoTitle: "Taller de Electromecánica en Asturias",
     metaDescription:
       "Reparación de sistemas eléctricos y electromecánicos del automóvil: arranque, carga, sensores, actuadores y cuadros eléctricos en Asturias.",
     intro:
@@ -115,6 +115,7 @@ export const services: Service[] = [
       { question: "¿Cuál es la diferencia entre mecánica y electromecánica?", answer: "La mecánica trabaja sobre piezas físicas del vehículo; la electromecánica añade los sistemas eléctricos y electrónicos que las controlan, muy presentes en los coches actuales." },
       { question: "¿Por qué se me descarga la batería?", answer: "Puede deberse a la propia batería, al alternador o a un consumo eléctrico anómalo. Se necesita revisión para saber cuál es la causa." },
       { question: "¿Puedo seguir usando el coche con un fallo eléctrico intermitente?", answer: "Depende del sistema afectado. Recomendamos revisarlo cuanto antes, especialmente si afecta al arranque o a sistemas de seguridad." },
+      { question: "¿Un fallo eléctrico puede dañar otras piezas del coche?", answer: "Sí. Un problema eléctrico no resuelto puede sobrecargar otros componentes conectados al mismo circuito, por lo que conviene revisarlo cuanto antes." },
     ],
     featuredOnHome: true,
   },
@@ -124,7 +125,7 @@ export const services: Service[] = [
     navLabel: "Mecánica general",
     title: "Taller mecánico en Asturias",
     benefit: "Mantenimiento y reparación mecánica general para tu vehículo.",
-    seoTitle: "Taller Mecánico en Asturias | EMCantábrico",
+    seoTitle: "Taller Mecánico en Asturias",
     metaDescription:
       "Reparación y mantenimiento mecánico general del automóvil en Asturias: motor, transmisión, frenos, suspensión y más.",
     intro:
@@ -150,6 +151,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Cuándo debo llevar el coche a revisión mecánica?", answer: "Ante cualquier ruido, vibración o cambio de comportamiento que no sea habitual, o de forma preventiva según el mantenimiento del fabricante." },
       { question: "¿La mecánica general incluye la parte eléctrica?", answer: "Los sistemas mecánicos y eléctricos suelen revisarse de forma conjunta cuando es necesario, dado que muchos vehículos actuales los integran." },
+      { question: "¿Cuánto tarda una revisión mecánica general?", answer: "Depende de la avería y de lo que sea necesario revisar; tras la inspección inicial se informa del tiempo estimado antes de intervenir." },
+      { question: "¿Puedo seguir circulando si el coche hace un ruido pero funciona bien?", answer: "No es recomendable. Un ruido nuevo suele ser la primera señal de un desgaste que conviene revisar antes de que vaya a más." },
     ],
     featuredOnHome: true,
   },
@@ -159,7 +162,7 @@ export const services: Service[] = [
     navLabel: "Mantenimiento",
     title: "Mantenimiento de coche en Asturias",
     benefit: "Revisiones periódicas para evitar averías antes de que aparezcan.",
-    seoTitle: "Mantenimiento de Coche en Asturias | EMCantábrico",
+    seoTitle: "Mantenimiento de Coche en Asturias",
     metaDescription:
       "Mantenimiento periódico del automóvil en Asturias: aceite y filtros, líquidos, correas y revisiones programadas según el fabricante.",
     intro:
@@ -185,6 +188,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Cada cuánto debo hacer el mantenimiento?", answer: "Depende del fabricante y del uso del vehículo; el manual del coche indica los intervalos recomendados de kilometraje y tiempo." },
       { question: "¿El mantenimiento evita todas las averías?", answer: "No elimina el riesgo por completo, pero reduce significativamente la probabilidad de averías por desgaste no detectado a tiempo." },
+      { question: "¿Qué pasa si no sigo los intervalos de mantenimiento del fabricante?", answer: "Aumenta el riesgo de averías por desgaste no detectado y, en algunos casos, puede afectar a la garantía del vehículo." },
+      { question: "¿El mantenimiento incluye la revisión de los neumáticos?", answer: "Se comprueba su estado y desgaste como parte de la revisión general, aunque su sustitución se presupuesta aparte si es necesaria." },
     ],
     featuredOnHome: true,
   },
@@ -194,7 +199,7 @@ export const services: Service[] = [
     navLabel: "Cambio de aceite y filtros",
     title: "Cambio de aceite y filtros en Asturias",
     benefit: "El mantenimiento más básico y más importante para tu motor.",
-    seoTitle: "Cambio de Aceite y Filtros en Asturias | EMCantábrico",
+    seoTitle: "Cambio de Aceite y Filtros en Asturias",
     metaDescription:
       "Cambio de aceite y filtros de motor, aire y habitáculo en Asturias, según las especificaciones recomendadas por el fabricante.",
     intro:
@@ -220,6 +225,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Qué pasa si tardo en cambiar el aceite?", answer: "El aceite pierde capacidad de lubricar y proteger el motor, lo que puede acelerar el desgaste de sus componentes." },
       { question: "¿Todos los coches usan el mismo aceite?", answer: "No. Cada motor tiene una especificación de aceite recomendada por el fabricante, que se respeta en cada cambio." },
+      { question: "¿Cuánto tarda un cambio de aceite y filtros?", answer: "Es una de las intervenciones más rápidas del taller; el tiempo exacto depende del modelo y de si se sustituyen filtros adicionales." },
+      { question: "¿Puedo elegir el tipo de aceite que se usa en mi coche?", answer: "Se recomienda respetar la especificación del fabricante; cualquier alternativa se comenta antes de realizar el cambio." },
     ],
   },
   {
@@ -228,7 +235,7 @@ export const services: Service[] = [
     navLabel: "Frenos",
     title: "Taller de frenos en Asturias",
     benefit: "Uno de los sistemas de seguridad más importantes del coche.",
-    seoTitle: "Taller de Frenos en Asturias | EMCantábrico",
+    seoTitle: "Taller de Frenos en Asturias",
     metaDescription:
       "Revisión y reparación del sistema de frenos: pastillas, discos, líquido de frenos y comprobación de seguridad en Asturias.",
     intro:
@@ -254,6 +261,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Cada cuánto hay que cambiar las pastillas de freno?", answer: "Depende del uso y estilo de conducción; se recomienda revisarlas periódicamente en lugar de guiarse solo por el kilometraje." },
       { question: "¿Es seguro seguir conduciendo si chirrían los frenos?", answer: "No se recomienda. El chirrido suele indicar desgaste avanzado y conviene revisarlo cuanto antes." },
+      { question: "¿Qué diferencia hay entre revisar discos y pastillas?", answer: "Las pastillas se desgastan más rápido que los discos; ambos se revisan juntos porque su estado está relacionado." },
+      { question: "¿Por qué vibra el volante al frenar?", answer: "Suele indicar que los discos de freno están deformados o desgastados de forma irregular, y conviene revisarlos." },
     ],
     featuredOnHome: true,
   },
@@ -263,7 +272,7 @@ export const services: Service[] = [
     navLabel: "Suspensión y amortiguadores",
     title: "Suspensión y amortiguadores en Asturias",
     benefit: "Estabilidad, confort y seguridad en cada curva y frenada.",
-    seoTitle: "Suspensión y Amortiguadores en Asturias | EMCantábrico",
+    seoTitle: "Suspensión y Amortiguadores en Asturias",
     metaDescription:
       "Revisión y sustitución de amortiguadores, muelles y componentes de suspensión en Asturias para mejorar estabilidad y seguridad.",
     intro:
@@ -289,6 +298,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Cómo sé si mis amortiguadores están gastados?", answer: "Signos habituales son el rebote tras un bache, ruidos secos y desgaste irregular de los neumáticos." },
       { question: "¿Afecta la suspensión a la frenada?", answer: "Sí. Una suspensión en mal estado reduce el contacto de las ruedas con el suelo, lo que puede aumentar la distancia de frenado." },
+      { question: "¿Se pueden cambiar los amortiguadores de uno en uno?", answer: "Se recomienda sustituirlos por pares (eje delantero o trasero) para mantener un comportamiento equilibrado del vehículo." },
+      { question: "¿La suspensión afecta al consumo de combustible?", answer: "Una suspensión en mal estado puede afectar al contacto de los neumáticos con el suelo y, de forma indirecta, al consumo." },
     ],
   },
   {
@@ -297,7 +308,7 @@ export const services: Service[] = [
     navLabel: "Distribución",
     title: "Correa y cadena de distribución en Asturias",
     benefit: "Un componente crítico: su fallo puede dañar gravemente el motor.",
-    seoTitle: "Correa de Distribución en Asturias | EMCantábrico",
+    seoTitle: "Correa de Distribución en Asturias",
     metaDescription:
       "Sustitución de correa o cadena de distribución según el intervalo del fabricante para evitar averías graves de motor en Asturias.",
     intro:
@@ -323,6 +334,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Qué pasa si se rompe la correa de distribución?", answer: "En muchos motores puede provocar el choque entre válvulas y pistones, con daños graves y reparaciones costosas." },
       { question: "¿Cómo sé cuándo toca cambiarla?", answer: "El manual del fabricante indica el intervalo de kilometraje o tiempo; si no hay historial claro, conviene revisarlo cuanto antes." },
+      { question: "¿Todos los coches tienen correa de distribución?", answer: "No; algunos motores usan cadena de distribución, con intervalos de sustitución distintos. Se revisa según el modelo concreto." },
+      { question: "¿Se puede saber a simple vista si está a punto de romperse?", answer: "No siempre es posible detectarlo a simple vista, por lo que se recomienda respetar el intervalo del fabricante en lugar de esperar a que aparezcan síntomas." },
     ],
   },
   {
@@ -331,7 +344,7 @@ export const services: Service[] = [
     navLabel: "Baterías",
     title: "Baterías de coche en Asturias",
     benefit: "Diagnóstico y sustitución de la batería cuando realmente lo necesita.",
-    seoTitle: "Baterías de Coche en Asturias | EMCantábrico",
+    seoTitle: "Baterías de Coche en Asturias",
     metaDescription:
       "Comprobación del estado de la batería, del sistema de carga y sustitución cuando sea necesario en Asturias.",
     intro:
@@ -357,6 +370,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Cuánto dura una batería de coche?", answer: "Depende del uso y las condiciones, pero con el tiempo pierde capacidad y puede necesitar sustitución." },
       { question: "¿Si cambio la batería se soluciona siempre el problema de arranque?", answer: "No siempre; conviene revisar también el alternador y el sistema de arranque para confirmar el origen del fallo." },
+      { question: "¿Por qué se descarga la batería si el coche apenas se usa?", answer: "El uso poco frecuente no permite que el alternador la recargue por completo, lo que puede acelerar su desgaste." },
+      { question: "¿Hace falta programar algo al cambiar la batería?", answer: "En algunos vehículos, sobre todo modelos recientes, es necesario registrar la batería nueva en el sistema del coche; se comprueba en cada caso." },
     ],
   },
   {
@@ -365,7 +380,7 @@ export const services: Service[] = [
     navLabel: "Aire acondicionado",
     title: "Aire acondicionado de coche en Asturias",
     benefit: "Revisión y carga del sistema de climatización del vehículo.",
-    seoTitle: "Aire Acondicionado de Coche en Asturias | EMCantábrico",
+    seoTitle: "Aire Acondicionado de Coche en Asturias",
     metaDescription:
       "Revisión, carga de gas y reparación del sistema de aire acondicionado del automóvil en Asturias.",
     intro:
@@ -391,6 +406,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿Cada cuánto hay que recargar el aire acondicionado?", answer: "Depende del vehículo y de si existen fugas; se recomienda revisarlo si se nota una pérdida progresiva de rendimiento." },
       { question: "¿Por qué huele mal el aire acondicionado?", answer: "Suele deberse a humedad o suciedad acumulada en el sistema, a menudo relacionada con el filtro de habitáculo." },
+      { question: "¿Es necesario revisarlo aunque enfríe bien?", answer: "Una revisión periódica ayuda a detectar fugas o pérdidas de gas antes de que el sistema deje de enfriar correctamente." },
+      { question: "¿El aire acondicionado también calienta el coche?", answer: "No. El aire acondicionado se encarga de enfriar y deshumidificar; la calefacción depende de otro sistema del vehículo." },
     ],
   },
   {
@@ -399,7 +416,7 @@ export const services: Service[] = [
     navLabel: "Pre-ITV",
     title: "Revisión pre-ITV en Asturias",
     benefit: "Revisamos los puntos habituales de la ITV antes de que lo haga la estación oficial.",
-    seoTitle: "Revisión Pre-ITV en Asturias | EMCantábrico",
+    seoTitle: "Revisión Pre-ITV en Asturias",
     metaDescription:
       "Revisión pre-ITV en Asturias para comprobar los puntos habituales de inspección antes de pasar la ITV oficial.",
     intro:
@@ -425,6 +442,8 @@ export const services: Service[] = [
     faqs: [
       { question: "¿La revisión pre-ITV garantiza que voy a aprobar?", answer: "No es una garantía, ya que la inspección la realiza la estación oficial, pero reduce significativamente el riesgo de un resultado desfavorable por causas detectables de antemano." },
       { question: "¿Cuándo conviene hacer la revisión pre-ITV?", answer: "Unos días o semanas antes de la cita de la ITV, con margen suficiente para corregir cualquier deficiencia encontrada." },
+      { question: "¿Qué diferencia hay entre un desfavorable y un negativo en la ITV?", answer: "Un desfavorable permite circular un tiempo limitado para corregir el defecto; un negativo impide circular hasta solucionarlo." },
+      { question: "¿La revisión pre-ITV sirve para cualquier tipo de vehículo?", answer: "Se adapta a los puntos de inspección habituales según el tipo de vehículo que se vaya a presentar a la ITV." },
     ],
   },
 ];
