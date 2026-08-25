@@ -14,12 +14,12 @@ export const siteConfig = {
   phoneDisplay: "613 053 009",
   email: "info@emcantabrico.es",
   address: {
-    line1: "Bobes 30, Entrada por AS17, Nave 4",
+    line1: "Aldea Bobes, 30, Nave 4",
     postalCode: "33429",
-    city: "Asturias",
+    city: "Bobes",
     region: "Asturias",
     country: "ES",
-    full: "Bobes 30, Entrada por AS17, Nave 4, 33429, Asturias",
+    full: "Aldea Bobes, 30, Nave 4, 33429 Bobes, Asturias",
   },
   // PENDING_OWNER_INPUT: o site atual só linka para as home genéricas das
   // redes (facebook.com, instagram.com, linkedin.com), sem perfil configurado.

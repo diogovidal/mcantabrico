@@ -15,6 +15,7 @@ export function getLocalBusinessSchema() {
       "@type": "PostalAddress",
       streetAddress: siteConfig.address.line1,
       postalCode: siteConfig.address.postalCode,
+      addressLocality: siteConfig.address.city,
       addressRegion: siteConfig.address.region,
       addressCountry: siteConfig.address.country,
     },
