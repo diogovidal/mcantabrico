@@ -4,10 +4,7 @@ import { MapPin } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Breadcrumb } from "@/components/ui/Breadcrumb";
 import { Button } from "@/components/ui/Button";
-import { GooglePhotoGallery } from "@/components/google/GooglePhotoGallery";
-import { GoogleMapsAttribution } from "@/components/google/GoogleMapsAttribution";
 import { GoogleMapEmbed } from "@/components/ui/GoogleMapEmbed";
-import { fetchPlaceDetails } from "@/lib/google-places";
 import { siteConfig, whatsappHref } from "@/lib/config";
 
 export const metadata: Metadata = {
@@ -17,10 +14,7 @@ export const metadata: Metadata = {
   alternates: { canonical: "/taller" },
 };
 
-export default async function TallerPage() {
-  const place = await fetchPlaceDetails();
-  const photos = place?.photos.slice(0, 6) ?? [];
-
+export default function TallerPage() {
   return (
     <>
       <Breadcrumb items={[{ label: "Taller" }]} />
@@ -87,27 +81,40 @@ export default async function TallerPage() {
       <section className="bg-surface py-14 sm:py-16">
         <Container>
           <h2 className="text-2xl font-bold text-text-primary">Instalaciones</h2>
-          {photos.length > 0 ? (
-            <div className="mt-6">
-              <GooglePhotoGallery photos={photos} />
-              <GoogleMapsAttribution className="mt-3" />
-            </div>
-          ) : (
-            <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-              <div className="relative aspect-[4/3] overflow-hidden rounded-card">
-                <Image
-                  src="/images/taller-hero.jpg"
-                  alt="Instalaciones del taller EMCantábrico"
-                  fill
-                  sizes="(min-width: 640px) 50vw, 100vw"
-                  className="object-cover"
-                />
-              </div>
-              <div className="flex aspect-[4/3] items-center justify-center rounded-card border border-dashed border-border bg-surface-elevated p-6 text-center text-sm text-text-secondary">
-                Más fotos de las instalaciones se añadirán próximamente.
+          <div className="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 sm:grid-rows-2">
+            <div className="relative aspect-[3/4] overflow-hidden rounded-card sm:aspect-auto sm:row-span-2">
+              <Image
+                src="/images/cafe.jpg"
+                alt="Zona de espera para clientes del taller EMCantábrico"
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+              <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-4 pt-10">
+                <p className="text-sm font-semibold text-white">
+                  Zona de espera para clientes, con total confort
+                </p>
               </div>
             </div>
-          )}
+            <div className="relative aspect-video overflow-hidden rounded-card">
+              <Image
+                src="/images/nave3.jpg"
+                alt="Interior del taller EMCantábrico con varios vehículos"
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+            <div className="relative aspect-video overflow-hidden rounded-card">
+              <Image
+                src="/images/nave4.jpg"
+                alt="Zona de trabajo del taller EMCantábrico con elevador"
+                fill
+                sizes="(min-width: 640px) 50vw, 100vw"
+                className="object-cover"
+              />
+            </div>
+          </div>
         </Container>
       </section>
 
